@@ -11,6 +11,16 @@ use App\Http\Resources\CategoryResource;
 class CategoryController extends Controller
 {
     /**
+     * Create a new AuthController instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('JWT', ['except' => ['index', 'show']]);
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -20,6 +30,10 @@ class CategoryController extends Controller
         return CategoryResource::collection(Category::latest()->get());
     }
 
+    public function reply()
+    {
+        
+    }
 
     /**
      * Store a newly created resource in storage.

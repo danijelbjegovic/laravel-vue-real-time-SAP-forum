@@ -34,9 +34,13 @@ class User extends Authenticatable implements JWTSubject
         return $this->hasMany(Question::class);
     }
 
+    public function setPasswordAttribute($value)
+    {
+        $this->attributes['password'] = bcrypt($value);
+    }
 
 
-    
+
     /**
      * Get the identifier that will be stored in the subject claim of the JWT.
      *
@@ -56,4 +60,5 @@ class User extends Authenticatable implements JWTSubject
     {
         return [];
     }
+
 }
