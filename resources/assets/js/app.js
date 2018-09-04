@@ -19,7 +19,6 @@ Vue.use(Vuetify)
  */
 
 Vue.component('AppHome', require('./components/AppHome.vue'));
-
 import router from './Router/router.js'
 
 const app = new Vue({
