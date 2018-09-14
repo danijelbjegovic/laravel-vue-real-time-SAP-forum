@@ -7,6 +7,7 @@
 </template>
 
 <script>
+
 export default {
     props:['content'],
     data(){
@@ -19,6 +20,15 @@ export default {
         color(){
             return this.liked ? 'red' : 'red lighten-4'
         }
+    },
+    created(){
+
+        Echo.channel('likeChannel')
+            .listen('LikeEvent', (e) => {
+                if(this.content.id == e.id){
+                    e.type == 1 ? this.count ++ : this.count --
+                }
+            });
     },
     methods:{
         likeIt(){
