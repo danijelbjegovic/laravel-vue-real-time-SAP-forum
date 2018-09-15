@@ -22,9 +22,19 @@ class Token{
     }
     
     decode(payload){
+        if(this.isBase64(payload)){
+            return JSON.parse(atob(payload))
+        }
+        return false;
     
-        return JSON.parse(atob(payload))
-    
+    }
+    isBase64(str){
+        try{
+            return btoa(atob(str)).replace(/=/g, "") == str
+        }
+        catch(err){
+            return false;
+        }
     }
 }
 export default Token = new Token()
