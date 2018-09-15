@@ -1,5 +1,15 @@
 <template>
     <v-container>
+
+        <v-alert
+        :value="true"
+        type="error"
+        v-if="errors"
+        >
+        Please provide category name 
+        </v-alert>
+
+
         <v-form @submit.prevent="submit"> 
             <v-text-field
             v-model="form.name"
@@ -8,8 +18,8 @@
             ></v-text-field>
             
 
-            <v-btn type="submit" color="pink" v-if="editSlug">Update</v-btn>
-            <v-btn type="submit" color="teal" v-else>Create</v-btn>
+            <v-btn type="submit" color="pink" :disabled="disabled" v-if="editSlug">Update</v-btn>
+            <v-btn type="submit" color="teal" :disabled="disabled" v-else>Create</v-btn>
         </v-form>
 
         <v-card>
@@ -63,7 +73,8 @@ export default {
                 name: null
             },
             categories :{},
-            editSlug:null
+            editSlug:null,
+            errors:null
         }
     },
     methods:{
@@ -76,6 +87,10 @@ export default {
             .then(res => {
                 this.categories.unshift(res.data)
                 this.form.name = null
+            })
+            .catch(error => {
+                this.errors = error.response.data.errors
+                console.log(this.errors.name)
             })
         },
         update(){
@@ -103,6 +118,11 @@ export default {
         axios.get('/api/category')
         .then(res => this.categories = res.data.data)
         .catch(error => console.log(error.response.data))
+    },
+    computed:{
+        disabled(){
+            return !this.form.name
+        }
     }
 }
 </script>
