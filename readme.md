@@ -11,9 +11,3 @@
 
 
 # Screenshots
-<img src="https://lh3.googleusercontent.com/xi20YJ1_vkjRrCu_d2AXegXAhAk5UbpjbcU8uF1apQgS-lQpesapSMuCNKjQc8AW2i8WVsd_gfANZuGsvt-F=w1440-h794-rw" />
-
-![](https://lh3.googleusercontent.com/xi20YJ1_vkjRrCu_d2AXegXAhAk5UbpjbcU8uF1apQgS-lQpesapSMuCNKjQc8AW2i8WVsd_gfANZuGsvt-F=w1440-h794-rw)
-![](https://lh4.googleusercontent.com/78zJeI4KOAv5jwM-Zq7U9JpAds0eGcrv6VWahljlj8_VfASrIAdJg_fWG4dswatdYTpfTgIfQyD2k-B8jiEF=w1440-h794-rw)
-![](https://lh5.googleusercontent.com/2ySapNNWZGHNq2N3aoFW3w9VcwlRhnSxkLUw7yK9Q1bXnInoyFaihIsXUxsiCejkYdQawBfKv3B-q87rxU_8=w1440-h794-rw)
-![](https://lh4.googleusercontent.com/q9y6SN28n6ekg01zFtQlxUWxbaK0C4MFGl8cn8mquN7QIN05mJFQ9RtFbU634XiKPQu0Bm-g6ordb4YgdGwS=w1440-h794-rw)
